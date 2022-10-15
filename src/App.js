@@ -24,7 +24,7 @@ function App() {
 
   // Please note that built-in geocoder has been deprecated. Although it is still available for use, bug fixing and updates are no longer available for this functionality. 
   //const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=3e5521f9e019fbeec2e81152df4324d7`; // Still usable but deprecated
-  const geoCodeUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&limit=1&appid=3e5521f9e019fbeec2e81152df4324d7`;
+  const geoCodeUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&limit=1&appid=3e5521f9e019fbeec2e81152df4324d7`;
 
   const performSearch = (event) => {
     if (event.key === 'Enter' || event.type === 'click') {

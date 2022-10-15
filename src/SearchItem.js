@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 
 export const SearchItem = ({item, index, deleteSearch, setData, setError}) => {
     //const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${item.city},${item.country}&units=metric&appid=3e5521f9e019fbeec2e81152df4324d7`
-    const geoCodeUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${item.city},${item.country}&limit=1&appid=3e5521f9e019fbeec2e81152df4324d7`;
+    const geoCodeUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${item.city},${item.country}&limit=1&appid=3e5521f9e019fbeec2e81152df4324d7`;
     const deleteItem = _ => deleteSearch(item)
     const performRepeatSearch = (event) => {
         if (event.key === 'Enter' || event.type === 'click') {
