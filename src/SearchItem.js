@@ -15,7 +15,7 @@ export const SearchItem = ({item, index, deleteSearch, setData, setError}) => {
                 throw("City not found");
               
                 var weatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + response.data[0].lat + "&lon=" + response.data[0].lon +
-                "&appid=3e5521f9e019fbeec2e81152df4324d7";
+                "&units=metric&appid=3e5521f9e019fbeec2e81152df4324d7";
     
               axios.get(weatherUrl).then((response) => {
                 toast.success("Weather updated!", {theme: "dark"});
