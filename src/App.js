@@ -26,6 +26,11 @@ function App() {
   //const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=3e5521f9e019fbeec2e81152df4324d7`; // Still usable but deprecated
   const geoCodeUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&limit=1&appid=3e5521f9e019fbeec2e81152df4324d7`;
 
+  const clearInputs = () => {
+    setCity('');
+    setCountry('');
+  }
+
   const performSearch = (event) => {
     if (event.key === 'Enter' || event.type === 'click') {
         if(city.length === 0) {
@@ -91,7 +96,7 @@ function App() {
               </Button>
             </Col>
             <Col sm={3} md={2} lg={1}>
-              <Button variant="outline-warning">
+              <Button variant="outline-warning" onClick={clearInputs}>
                 Clear
               </Button>
             </Col>
